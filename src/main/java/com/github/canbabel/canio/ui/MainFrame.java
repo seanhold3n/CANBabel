@@ -59,14 +59,12 @@ public class MainFrame extends javax.swing.JFrame {
     private Thread convertThread;
     public Preferences prefs = Preferences.userNodeForPackage(this.getClass());  
     private FileFilter directoryFilter = new FileFilter() {
-        @Override
         public boolean accept(File file) {
             return file.isDirectory();
         }
     };
     private FileFilter dbcFilter = new FileFilter() {
 
-        @Override
         public boolean accept(File file) {
             return file.getName().toLowerCase().endsWith(".dbc");
         }
@@ -402,7 +400,6 @@ private void closeButtonHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:eve
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
 
-            @Override
             public void run() {
                 new MainFrame().setVisible(true);
             }
@@ -462,7 +459,6 @@ private void closeButtonHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:eve
     PrintWriter logWriter = new PrintWriter(logOutput);
     private Runnable convertRunnable = new Runnable() {
 
-        @Override
         public void run() {
             addFilesOrFoldersButton.setEnabled(false);
             removeButton.setEnabled(false);
@@ -494,17 +490,14 @@ private void closeButtonHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:eve
 
                 ErrorHandler handler = new ErrorHandler() {
 
-                    @Override
                     public void warning(SAXParseException exception) throws SAXException {
                         exception.printStackTrace(logWriter);
                     }
 
-                    @Override
                     public void error(SAXParseException exception) throws SAXException {
                         exception.printStackTrace(logWriter);
                     }
 
-                    @Override
                     public void fatalError(SAXParseException exception) throws SAXException {
                         exception.printStackTrace(logWriter);
                     }
