@@ -136,7 +136,7 @@ public class MainFrame extends javax.swing.JFrame {
         inputPanel = new javax.swing.JPanel();
         addFilesOrFoldersButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        fileList = new javax.swing.JList();
+        fileList = new javax.swing.JList<File>();
         removeButton = new javax.swing.JButton();
         progressBar = new javax.swing.JProgressBar();
         closeButton = new javax.swing.JButton();
@@ -425,7 +425,7 @@ private void closeButtonHandler(java.awt.event.ActionEvent evt) {//GEN-FIRST:eve
     private javax.swing.JButton closeButton;
     private javax.swing.JButton convertButton;
     private javax.swing.JTextArea debugInfoArea;
-    private javax.swing.JList fileList;
+    private javax.swing.JList<File> fileList;
     private javax.swing.JCheckBox gzippedCheckbox;
     private javax.swing.JPanel informationPanel;
     private javax.swing.JPanel inputPanel;

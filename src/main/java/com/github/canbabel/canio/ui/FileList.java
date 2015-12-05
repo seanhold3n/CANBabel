@@ -32,7 +32,7 @@ import javax.swing.event.ListDataListener;
  *
  * @author Jan-Niklas Meier < dschanoeh@googlemail.com >
  */
-public class FileList implements ListModel{
+public class FileList implements ListModel<File>{
 
     private List<File> files = new ArrayList<File>();
     private Set<ListDataListener> listeners = new HashSet<ListDataListener>();
@@ -64,7 +64,7 @@ public class FileList implements ListModel{
         return files.size();
     }
 
-    public Object getElementAt(int index) {
+    public File getElementAt(int index) {
         return files.get(index);
     }
 
